@@ -1,0 +1,15 @@
+---
+
+- hosts: all
+
+  sudo: yes
+
+  tasks:
+
+    - name: Installing VIM  
+
+      command: "{{ item }}"
+
+      with_items :
+
+       - yum install vim -y
